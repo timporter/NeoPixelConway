@@ -1,11 +1,9 @@
 import random
 import time
-"""
 import board
 import neopixel
 
 pixels = neopixel.NeoPixel(board.D18, 64, auto_write=False)
-"""
 
 decay = 10   # After it switches off, how fast should cells light fade (values per 0.1 seconds)
 density = 0.3  # Initial density of cells when generating new world (0.0 - 1.0)
@@ -167,14 +165,12 @@ while True:
             else:
                 blues[x][y] = min(200, max(blues[x][y] - decay, 0))
 
-    """
     i = 0
-    for x in range(0, 7):
-        for y in range(0, 7):
+    for x in range(0, 8):
+        for y in range(0, 8):
             pixels[i] = (reds[x][y], greens[x][y], blues[x][y])
             i = i + 1
     pixels.show()
-    """
 
     tick = tick + 1
     time.sleep(0.1)
